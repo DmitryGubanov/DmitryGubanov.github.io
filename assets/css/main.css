@@ -1,6 +1,8 @@
+/* GENERAL FORMATTING APPLICABLE AT ALL SCREEN SIZES */
+
 /* Remove default formatting */
 
-body, nav, section, ul, li {
+body, nav, section, ul, li, div {
     margin: 0;
     padding: 0;
     border: 0;
@@ -34,7 +36,7 @@ nav {
 
 #nav-items .nav-item {
     display: inline-block;
-    margin: 0 8px 0 0;
+    margin: 0 8px 0;
     padding: 32px 8px 24px;
     text-transform: uppercase;
     border-bottom: 3px solid rgba(0, 0, 0, 0);
@@ -42,4 +44,36 @@ nav {
 
 #nav-items .nav-item:hover {
     border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+/* Profile specifics */
+
+
+
+/* RESPONSIVE DESIGN BREAKPOINTS */
+
+/* Mobile or very small screen desgins go here */
+
+/* Narrow screen designs go here */
+@media screen and (min-width: 900px) {
+
+    #profile-info, #resume-info {
+        margin-left: 128px;
+        width: 576px;
+    }
+
+}
+
+/* Normal/wide screen designs go here */
+@media screen and (min-width: 1280px) {
+
+    #profile-info, #resume-info {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    #resume-info {
+        margin-left: 0;
+    }
+
 }
