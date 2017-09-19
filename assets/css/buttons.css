@@ -1,0 +1,20 @@
+button {
+    display: inline-block;
+    background: center center no-repeat;
+    border: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    border-radius: 2px;
+    padding: 8px 24px;
+    box-shadow: 0px 3px 4px rgb(64, 64, 64);
+}
+
+button:hover {
+    box-shadow: 0px 3px 7px rgb(64, 64, 64);
+}
+
+button span.fa {
+    margin-right: 8px;
+}
