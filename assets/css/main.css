@@ -152,6 +152,60 @@ ul.skills-list li.skill-item.selected {
 
 /* Projects card specifics */
 
+#projects-list li.project-item {
+    position: relative;
+}
+
+#projects-list li.project-item .project-name {
+    font-size: 110%;
+    margin-bottom: 16px;
+    line-height: 24px;
+}
+
+#projects-list li.project-item .project-name span.fa {
+    margin-right: 4px;
+}
+
+#projects-list li.project-item a.github-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 80%;
+    padding: 4px 16px;
+    background-color: rgb(212, 0, 128);
+}
+
+#projects-list li.project-item a.github-link:hover {
+    background-color: rgb(196, 0, 112);
+}
+
+#projects-list li.project-item p.project-desc {
+
+}
+
+#projects-list li.project-item ul.relevant-skills li {
+    display: inline-block;
+    font-size: 90%;
+    color: rgb(64, 64, 64);
+    margin: 0 8px 8px 0px;
+}
+
+#projects-list li.project-item ul.relevant-skills li span.skill-dot {
+    background-color: rgb(64, 128, 255);
+    line-height: 8px;
+    padding: 0 8px;
+    margin-right: 4px;
+    border-radius: 8px;
+}
+
+#projects-list li.project-item div.more-info-btn {
+    margin: 16px 0 0;
+    cursor: pointer;
+}
+
+#projects-list li.project-item div.more-info-btn span.fa {
+    margin-right: 8px;
+}
 
 /* RESPONSIVE DESIGN BREAKPOINTS */
 

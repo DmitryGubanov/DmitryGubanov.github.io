@@ -1,4 +1,4 @@
-button {
+button, .my-btn {
     display: inline-block;
     background: center center no-repeat;
     border: 0;
@@ -11,10 +11,10 @@ button {
     box-shadow: 0px 3px 4px rgb(64, 64, 64);
 }
 
-button:hover {
+button:hover, .my-btn:hover {
     box-shadow: 0px 3px 7px rgb(64, 64, 64);
 }
 
-button span.fa {
+button span.fa, .my-btn span.fa {
     margin-right: 8px;
 }
