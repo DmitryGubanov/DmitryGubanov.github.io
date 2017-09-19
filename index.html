@@ -8,27 +8,35 @@
     <meta name="author" content="Dmitry Gubanov" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/cards.css" />
+    <link rel="stylesheet" href="assets/css/buttons.css" />
+    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
 </head>
 
 <body>
 
     <nav>
         <ul id="nav-items">
+            <li class="nav-item">About Me</li>
             <li class="nav-item">Skills</li>
             <li class="nav-item">Projects</li>
             <li class="nav-item">Education and Work</li>
         </ul>
     </nav>
 
-    <section id="profile-info">
+    <section id="contact-info">
 
         <div id="profile" class="card">
             <div id="profile-photo-wrapper">
-                <div id="profile-photo-title">Dmitry Gubanov</div>
-                <img id="profile-photo" src="" alt="photo" />
+                <div id="profile-photo-title">
+                    <div id="contact-name">Dmitry Gubanov</div>
+                    <div id="contact-email">gubanov.a.dmitry@gmail.com</div>
+                </div>
+                <img id="profile-photo" src="https://new1.fjcdn.com/comments/Pimpinpenguin+rolled+a+random+image+posted+in+comment+119714+at+_8b5288379fdf3abcbe26556bea3e4794.png" alt="photo" />
             </div>
-            <div class="card-content">
-                ayo
+            <div id="contact-buttons" class="card-content">
+                <button id="my-resume-btn"><span class="fa fa-download"></span>Download My Resume</button>
+                <button id="my-github-btn"><span class="fa fa-external-link"></span>View My Github</button>
             </div>
         </div>
 
@@ -36,21 +44,87 @@
 
     <section id="resume-info">
 
-        <div id="skills" class="card">
+        <div id="about-me" class="card">
+            <div class="card-title">
+                About Me
+            </div>
             <div class="card-content">
-                ayo
+                <p>I'm a recent graduate of Computer Science and Mathematics at The University of Toronto.</p>
+                <p>Here's some more info about me blah blah blah</p>
+            </div>
+        </div>
+
+        <div id="skills" class="card">
+            <div class="card-title">
+                Skills
+            </div>
+            <div class="card-content">
+                <div class="skill-title">Programming Languages</div>
+                <ul class="skills-list">
+                    <li class="skill-item">Python</li>
+                    <li class="skill-item">Java</li>
+                    <li class="skill-item">JavaScript</li>
+                    <li class="skill-item">SQL</li>
+                    <li class="skill-item">C</li>
+                    <li class="skill-item">C++</li>
+                    <li class="skill-item">HTML</li>
+                    <li class="skill-item">CSS</li>
+                    <li class="skill-item">PHP</li>
+                    <li class="skill-item">Perl</li>
+                    <li class="skill-item">Go</li>
+                    <li class="skill-item">Bash</li>
+                </ul>
+                <div class="skill-title">Frameworks and Technologies</div>
+                <ul class="skills-list">
+                    <li class="skill-item">AngularJS</li>
+                    <li class="skill-item">Node.js</li>
+                    <li class="skill-item">MongoDB</li>
+                    <li class="skill-item">REST API</li>
+                    <li class="skill-item">jQuery</li>
+                    <li class="skill-item">Android Development</li>
+                </ul>
+                <div class="skill-title">Source Control</div>
+                <ul class="skills-list">
+                    <li class="skill-item">git</li>
+                    <li class="skill-item">svn</li>
+                    <li class="skill-item">Rational Clearcase</li>
+                </ul>
+                <div class="skill-title">Teamwork Methodologies</div>
+                <ul class="skills-list">
+                    <li class="skill-item">Agile</li>
+                    <li class="skill-item">Scrum</li>
+                </ul>
             </div>
         </div>
 
         <div id="projects" class="card">
+            <div class="card-title">
+                Projects
+            </div>
             <div class="card-content">
-                ayo
+                <ul id="projects-list">
+                    <li class="project-item">
+                        <div class="project-name"><span class="fa fa-line-chart"></span>Stock Trading Program</div>
+                        <div class="project-desc">Backtests user's portfolios using indicator-based strategies. Features optional periodic rebalancing and contributions. Summarizes results with charts and statistics.</div>
+                    </li>
+                </ul>
             </div>
         </div>
 
         <div id="education-and-work" class="card">
+            <div class="card-title">
+                Education and Work
+            </div>
             <div class="card-content">
-                ayo
+                <div id="education-title">Education</div>
+                <div id="school-name">University of Toronto</div>
+                <div id="degree">Honours. B.Sc. in Computer Science and Mathematics</div>
+                <div id="years">2010 - 2017</div>
+                <div id="gpa">Final GPA: 3.2</div>
+                <div id="work-title">Relevant Employment Experience</div>
+                <div id="work-position">DevOps: Software Developer and System Admin</div>
+                <div id="work-location">IBM Canada</div>
+                <div id="work-desc">Wrote code, managed systems, etc etc.</div>
             </div>
         </div>
 
