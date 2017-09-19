@@ -198,13 +198,42 @@ ul.skills-list li.skill-item.selected {
     border-radius: 8px;
 }
 
-#projects-list li.project-item div.more-info-btn {
-    margin: 16px 0 0;
-    cursor: pointer;
+/* Education and work card specifics */
+
+#education .card-content, #work .card-content {
+    position: relative;
 }
 
-#projects-list li.project-item div.more-info-btn span.fa {
-    margin-right: 8px;
+#education .content-title, #work .content-title {
+    font-size: 110%;
+    margin: 24px 0 8px;
+}
+
+#education .content-title.first-title, #work .content-title.first-title {
+    margin-top: 0;
+}
+
+#education .designation, #work .designation {
+    font-size: 110%;
+}
+
+#education .place, #work .place {
+    margin-bottom: 16px;
+}
+
+#education .place::before, #work .place::before {
+    content: "at";
+    margin: 0 4px 0 2px;
+}
+#education .years, #work .years {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    color: rgb(128, 128, 128);
+}
+
+#education .detail, #work .detail {
+    margin: 8px 0 0;
 }
 
 /* RESPONSIVE DESIGN BREAKPOINTS */

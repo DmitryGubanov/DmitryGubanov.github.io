@@ -24,6 +24,19 @@
     margin-bottom: 12px;
 }
 
+div.more-info-btn {
+    color: rgb(128, 128, 128);
+    padding: 8px 0;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+div.more-info-btn::before {
+    font-family: FontAwesome;
+    content: '\f0d7';
+    margin: 0 8px 0 4px;
+}
+
 @media screen and (min-width: 900px) {
 
 }
