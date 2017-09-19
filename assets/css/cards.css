@@ -1,12 +1,27 @@
 .card {
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 2px 3px rgb(164, 164, 164);
+    box-shadow: 0 2px 4px rgb(96, 96, 96);
     margin: 16px;
     border-radius: 2px;
+    overflow: hidden;
+}
+
+.card .card-title {
+    margin: 24px 24px 0;
+    padding-bottom: 12px;
+    font-size: 110%;
+    color: rgb(96, 96, 96);
+    border-bottom: solid 1px rgb(224, 224, 224);
 }
 
 .card .card-content {
     padding: 24px;
+    color: rgb(64, 64, 64);
+}
+
+.card .card-content p {
+    line-height: 24px;
+    margin-bottom: 12px;
 }
 
 @media screen and (min-width: 900px) {
