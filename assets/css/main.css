@@ -31,6 +31,51 @@ nav {
     box-shadow: 0 2px 10px rgb(128, 128, 128);
 }
 
+/* Some elements defined by their style that are reused */
+
+ul.relevant-skills li {
+    display: inline-block;
+    font-size: 90%;
+    color: rgb(64, 64, 64);
+    margin: 0 8px 8px 0px;
+}
+
+ul.relevant-skills li span.skill-dot {
+    background-color: rgb(64, 128, 255);
+    line-height: 8px;
+    padding: 0 8px;
+    margin-right: 4px;
+    border-radius: 8px;
+}
+
+ul.relevant-skills li span.skill-dot.a {
+    background-color: rgb(255, 128, 64);
+}
+
+ul.relevant-skills li span.skill-dot.b {
+    background-color: rgb(128, 255, 64);
+}
+
+ul.relevant-skills li span.skill-dot.c {
+    background-color: rgb(128, 64, 128);
+}
+
+ul.relevant-skills li span.skill-dot.d {
+    background-color: rgb(128, 255, 255);
+}
+
+ul.relevant-skills li span.skill-dot.e {
+    background-color: rgb(64, 64, 255);
+}
+
+ul.relevant-skills li span.skill-dot.f {
+    background-color: rgb(255, 64, 255);
+}
+
+ul.relevant-skills li span.skill-dot.z {
+    background-color: rgb(128, 128, 128);
+}
+
 /* Nav bar specifics */
 
 #nav-items {
@@ -154,6 +199,9 @@ ul.skills-list li.skill-item.selected {
 
 #projects-list li.project-item {
     position: relative;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgb(224, 224, 224);
 }
 
 #projects-list li.project-item .project-name {
@@ -164,6 +212,7 @@ ul.skills-list li.skill-item.selected {
 
 #projects-list li.project-item .project-name span.fa {
     margin-right: 4px;
+
 }
 
 #projects-list li.project-item a.github-link {
@@ -179,23 +228,20 @@ ul.skills-list li.skill-item.selected {
     background-color: rgb(196, 0, 112);
 }
 
+#projects-list li.project-item a.github-link.blocked {
+    background-color: rgb(64, 64, 64);
+    box-shadow: none;
+    cursor: default;
+}
+
+#projects-list li.project-item a.github-link.blocked:hover {
+    background-color: rgb(64, 64, 64);
+    box-shadow: none;
+    cursor: default;
+}
+
 #projects-list li.project-item p.project-desc {
 
-}
-
-#projects-list li.project-item ul.relevant-skills li {
-    display: inline-block;
-    font-size: 90%;
-    color: rgb(64, 64, 64);
-    margin: 0 8px 8px 0px;
-}
-
-#projects-list li.project-item ul.relevant-skills li span.skill-dot {
-    background-color: rgb(64, 128, 255);
-    line-height: 8px;
-    padding: 0 8px;
-    margin-right: 4px;
-    border-radius: 8px;
 }
 
 /* Education and work card specifics */
@@ -218,6 +264,7 @@ ul.skills-list li.skill-item.selected {
 }
 
 #education .place, #work .place {
+    color: rgb(124, 124, 124);
     margin-bottom: 16px;
 }
 
@@ -229,11 +276,44 @@ ul.skills-list li.skill-item.selected {
     position: absolute;
     top: 24px;
     right: 24px;
+    font-size: 110%;
     color: rgb(128, 128, 128);
 }
 
 #education .detail, #work .detail {
     margin: 8px 0 0;
+}
+
+#courses-list li.course-item {
+    position: relative;
+    border-top: 1px solid rgb(224, 224, 224);
+    padding: 8px 0;
+}
+
+#courses-list li.course-item .course-name {
+    margin-bottom: 12px;
+}
+
+#courses-list li.course-item .course-desc {
+    color: rgb(112, 112, 112);
+    font-size: 90%;
+}
+
+#courses-list li.course-item .course-duration {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    color: rgb(168, 168, 168);
+}
+
+#work .card-content p::before {
+    content: '-';
+    margin-right: 4px;
+}
+
+#work .card-content p .skill-item {
+    display: inline-block;
+    font-weight: 600;
 }
 
 /* RESPONSIVE DESIGN BREAKPOINTS */
