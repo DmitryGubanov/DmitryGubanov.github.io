@@ -308,13 +308,21 @@ ul.skills-list li.skill-item.selected {
 
 #work .card-content p::before {
     content: '-';
-    margin-right: 4px;
+    font-weight: 700;
+    margin-right: 8px;
 }
 
 #work .card-content p .skill-item {
     display: inline-block;
-    font-weight: 600;
+    text-decoration: underline;
 }
+/*#work .card-content p .skill-item {
+    display: inline-block;
+    background-color: rgb(96, 96, 96);
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+    padding: 0 5px;
+}*/
 
 /* RESPONSIVE DESIGN BREAKPOINTS */
 
