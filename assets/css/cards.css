@@ -35,13 +35,13 @@ div.more-info-btn {
 div.more-info-btn::before {
     font-family: FontAwesome;
     content: '\f0d7';
-    margin: 0 8px 0 4px;
+    margin-right: 8px;
 }
 
 @media screen and (min-width: 900px) {
 
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1300px) {
 
 }

@@ -72,6 +72,14 @@ ul.relevant-skills li span.skill-dot.f {
     background-color: rgb(255, 64, 255);
 }
 
+ul.relevant-skills li span.skill-dot.g {
+    background-color: rgb(255, 255, 64);
+}
+
+ul.relevant-skills li span.skill-dot.h {
+    background-color: rgb(128, 128, 16);
+}
+
 ul.relevant-skills li span.skill-dot.z {
     background-color: rgb(128, 128, 128);
 }
@@ -170,6 +178,56 @@ ul.relevant-skills li span.skill-dot.z {
 
 .skill-title {
     margin-bottom: 8px;
+}
+
+.skill-filters {
+    margin-bottom: 24px;
+}
+
+.skill-filters li {
+    position: relative;
+    display: inline-block;
+    margin-right: 42px;
+}
+
+.skill-filters input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.skill-filters li label {
+    position: relative;
+    top: 2px;
+    left: 26px;
+}
+
+.skill-filters li .check {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    margin-right: 2px;
+    height: 16px;
+    width: 16px;
+    border-radius: 100%;
+    border: solid 3px rgb(128, 128, 128);
+}
+
+.skill-filters li .check:hover {
+    border-color: rgb(96, 96, 96);
+    cursor: pointer;
+}
+
+.skill-filters li .checked {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2px;
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    background-color: rgb(128, 128, 128);
 }
 
 ul.skills-list {
@@ -284,6 +342,10 @@ ul.skills-list li.skill-item.selected {
     margin: 8px 0 0;
 }
 
+#education .detail-header, #work .detail-header {
+    margin: 16px 0 8px;
+}
+
 #courses-list li.course-item {
     position: relative;
     border-top: 1px solid rgb(224, 224, 224);
@@ -306,23 +368,15 @@ ul.skills-list li.skill-item.selected {
     color: rgb(168, 168, 168);
 }
 
-#work .card-content p::before {
-    content: '-';
-    font-weight: 700;
-    margin-right: 8px;
+#work .card-content ul.work-details li {
+    list-style-type: disc;
+    margin: 8px 0 16px 16px;
 }
 
-#work .card-content p .skill-item {
+#work .card-content ul.work-details li .skill-item {
     display: inline-block;
     text-decoration: underline;
 }
-/*#work .card-content p .skill-item {
-    display: inline-block;
-    background-color: rgb(96, 96, 96);
-    color: rgb(255, 255, 255);
-    border-radius: 3px;
-    padding: 0 5px;
-}*/
 
 /* RESPONSIVE DESIGN BREAKPOINTS */
 
@@ -343,7 +397,7 @@ ul.skills-list li.skill-item.selected {
 }
 
 /* Normal/wide screen designs go here */
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1300px) {
 
     #contact-info, #resume-info {
         display: inline-block;
