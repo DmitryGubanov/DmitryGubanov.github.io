@@ -16,19 +16,29 @@
 
 <body>
 
-    <nav>
+    <nav class="fixed">
         <div class="main-content">
             <ul id="nav-items">
-                <li class="nav-item">About Me</li>
-                <li class="nav-item">Skills</li>
-                <li class="nav-item">Projects</li>
-                <li class="nav-item">Education</li>
-                <li class="nav-item">Employment</li>
+                <li id="nav-about-me" class="nav-item selected">About Me</li>
+                <li id="nav-skills" class="nav-item">Skills</li>
+                <li id="nav-projects" class="nav-item">Projects</li>
+                <li id="nav-education" class="nav-item">Education</li>
+                <li id="nav-work" class="nav-item">Employment</li>
             </ul>
         </div>
     </nav>
 
     <div class="main-content">
+
+        <nav class="card flipper">
+            <ul id="nav-flipper-items">
+                <li id="nav-flip-about-me" class="nav-item selected">About Me</li>
+                <li id="nav-flip-skills" class="nav-item">Skills</li>
+                <li id="nav-flip-projects" class="nav-item">Projects</li>
+                <li id="nav-flip-education" class="nav-item">Education</li>
+                <li id="nav-flip-work" class="nav-item">Employment</li>
+            </ul>
+        </nav>
 
         <section id="contact-info">
 
@@ -50,7 +60,7 @@
 
         <section id="resume-info">
 
-            <div id="about-me" class="card">
+            <div id="about-me" class="card visible">
                 <div class="card-title">
                     About Me
                 </div>
@@ -62,83 +72,79 @@
                 </div>
             </div>
 
-            <div id="show-all" class="card button">
+            <!--<div id="show-all" class="card button">
                 <div class="card-content">Show all</div>
-            </div>
+            </div>-->
 
-            <div id="skills" class="card">
+            <div id="skills" class="card hidden">
                 <div class="card-title">
                     Skills
                 </div>
                 <div class="card-content">
                     <ul class="filters">
                         <li id="skill-general">
-                            <input type="radio" id="radio-skill-general" />
-                            <div class="check"></div>
-                            <div class="checked"></div>
+                            <div class="box"></div>
+                            <div class="mark"></div>
                             <label for="radio-skill-general">General purpose</label>
                         </li>
                         <li id="skill-web">
-                            <input type="radio" id="radio-skill-web" />
-                            <div class="check"></div>
-                            <div class="checked"></div>
+                            <div class="box"></div>
+                            <div class="mark"></div>
                             <label for="radio-skill-web">Web</label>
                         </li>
                     </ul>
                     <ul class="filters final">
-                        <li id="exp-professional">
-                            <input type="radio" id="radio-exp-professional" />
-                            <div class="check"></div>
-                            <div class="checked"></div>
+                        <li id="exp-pro-oneyr">
+                            <div class="box"></div>
+                            <div class="mark"></div>
                             <label for="radio-exp-professional">>1 year work experience</label>
                         </li>
-                        <li id="exp-projects">
-                            <input type="radio" id="radio-exp-projects" />
-                            <div class="check"></div>
-                            <div class="checked"></div>
+                        <li id="exp-other-oneyr">
+                            <div class="box"></div>
+                            <div class="mark"></div>
                             <label for="radio-exp-projects">>1 year other experience</label>
                         </li>
                     </ul>
                     <div class="skill-title">Programming Languages</div>
                     <ul class="skills-list">
-                        <li class="skill-item">Python</li>
-                        <li class="skill-item">Java</li>
-                        <li class="skill-item">JavaScript</li>
-                        <li class="skill-item">SQL</li>
-                        <li class="skill-item">C</li>
-                        <li class="skill-item">C++</li>
-                        <li class="skill-item">HTML</li>
-                        <li class="skill-item">CSS</li>
-                        <li class="skill-item">PHP</li>
-                        <li class="skill-item">Perl</li>
-                        <li class="skill-item">Go</li>
-                        <li class="skill-item">Bash</li>
+                        <li class="skill-item" data-skilltype='skill-general exp-other-oneyr'>Python</li>
+                        <li class="skill-item" data-skilltype='skill-general exp-other-oneyr'>Java</li>
+                        <li class="skill-item" data-skilltype='skill-web exp-pro-oneyr exp-other-oneyr'>JavaScript</li>
+                        <li class="skill-item" data-skilltype='skill-general exp-other-oneyr exp-pro-oneyr'>SQL</li>
+                        <li class="skill-item" data-skilltype='skill-general exp-other-oneyr'>C</li>
+                        <li class="skill-item" data-skilltype='skill-general'>C++</li>
+                        <li class="skill-item" data-skilltype='skill-web exp-other-oneyr exp-pro-oneyr'>HTML</li>
+                        <li class="skill-item" data-skilltype='skill-web exp-other-oneyr exp-pro-oneyr'>CSS</li>
+                        <li class="skill-item" data-skilltype=''>PHP</li>
+                        <li class="skill-item" data-skilltype='skill-general exp-pro-oneyr'>Perl</li>
+                        <li class="skill-item" data-skilltype='skill-general'>Go</li>
+                        <li class="skill-item" data-skilltype='skill-general exp-pro-oneyr'>Bash</li>
                     </ul>
                     <div class="skill-title">Frameworks and Technologies</div>
                     <ul class="skills-list">
-                        <li class="skill-item">AngularJS</li>
-                        <li class="skill-item">Node.js</li>
-                        <li class="skill-item">MongoDB</li>
-                        <li class="skill-item">Relational DBMS</li>
-                        <li class="skill-item">REST API</li>
-                        <li class="skill-item">jQuery</li>
-                        <li class="skill-item">Android Development</li>
+                        <li class="skill-item" data-skilltype='skill-web exp-pro-oneyr'>AngularJS</li>
+                        <li class="skill-item" data-skilltype='skill-web'>Node.js</li>
+                        <li class="skill-item" data-skilltype='skill-web'>MongoDB</li>
+                        <li class="skill-item" data-skilltype='skill-general exp-other-oneyr'>Relational DBMS</li>
+                        <li class="skill-item" data-skilltype='skill-web exp-pro-oneyr'>REST API</li>
+                        <li class="skill-item" data-skilltype='skill-web exp-other-oneyr'>jQuery</li>
+                        <li class="skill-item" data-skilltype=''>Android Development</li>
                     </ul>
                     <div class="skill-title">Source Control</div>
                     <ul class="skills-list">
-                        <li class="skill-item">git</li>
-                        <li class="skill-item">svn</li>
-                        <li class="skill-item">Rational Clearcase</li>
+                        <li class="skill-item" data-skilltype='skill-general exp-other-oneyr'>git</li>
+                        <li class="skill-item" data-skilltype=''>svn</li>
+                        <li class="skill-item" data-skilltype=''>Rational Clearcase</li>
                     </ul>
                     <div class="skill-title">Teamwork Methodologies</div>
                     <ul class="skills-list">
-                        <li class="skill-item">Agile</li>
-                        <li class="skill-item">Scrum</li>
+                        <li class="skill-item" data-skilltype='skill-general exp-pro-oneyr'>Agile</li>
+                        <li class="skill-item" data-skilltype='skill-general exp-pro-oneyr'>Scrum</li>
                     </ul>
                 </div>
             </div>
 
-            <div id="projects" class="card">
+            <div id="projects" class="card hidden">
                 <div class="card-title">
                     Projects
                 </div>
@@ -237,7 +243,7 @@
                 </div>
             </div>
 
-            <div id="education" class="card">
+            <div id="education" class="card hidden">
                 <div class="card-title">
                     Education
                 </div>
@@ -327,7 +333,7 @@
                 </div>
             </div>
 
-            <div id="work" class="card">
+            <div id="work" class="card hidden">
                 <div class="card-title">
                     Relevant Employment Experience
                 </div>
@@ -370,13 +376,16 @@
                 </div>
             </div>
 
-            <div id="back-to-top" class="card button">
+            <!--<div id="back-to-top" class="card button">
                 <div class="card-content">Back to top</div>
-            </div>
+            </div>-->
 
         </section>
 
     </div>
+
+    <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>

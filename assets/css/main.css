@@ -2,7 +2,7 @@
 
 /* Remove default formatting */
 
-body, nav, section, ul, li, div, p {
+body, nav, section, ul, li, div, p, a {
     margin: 0;
     padding: 0;
     border: 0;
@@ -22,16 +22,8 @@ body {
     background-color: rgb(212, 212, 212);
 }
 
-nav {
-    position: relative;
-    color: rgb(255, 255, 255);
-    background-color: rgb(64, 128, 255);
-    height: 96px;
-    width: 100%;
-    box-shadow: 0 2px 10px rgb(128, 128, 128);
-}
-
 div.main-content {
+    position: relative;
     margin: auto;
 }
 
@@ -88,26 +80,76 @@ ul.relevant-skills li span.skill-dot.z {
     background-color: rgb(128, 128, 128);
 }
 
-/* Nav bar specifics */
+/* Nav specifics */
+
+nav.fixed {
+    position: fixed;
+    z-index: 9;
+    background-color: rgb(64, 128, 255);
+    height: 96px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    transition: top 0.4s ease-in-out;
+    -webkit-transition: top 0.4s ease-in-out;
+    -moz-transition: top 0.4s ease-in-out;
+    -o-transition: top 0.4s ease-in-out;
+}
 
 #nav-items {
-    position: absolute;
-    bottom: 0;
+    height: 96px;
+    margin: 0 16px;
 }
 
 #nav-items .nav-item {
+    color: rgb(234, 234, 234);
     display: inline-block;
-    margin: 0 16px 0;
-    padding: 32px 0 24px;
+    line-height: 25px;
+    margin: 36px 16px 0 0;
+    padding: 16px 0 16px;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 105%;
-    border-bottom: 3px solid rgba(0, 0, 0, 0);
+    border-bottom: 4px solid rgba(0, 0, 0, 0);
     cursor: pointer;
 }
 
 #nav-items .nav-item:hover {
+    color: rgb(255, 255, 255);
+}
+
+#nav-items .nav-item.selected {
+    color: rgb(255, 255, 255);
     border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+nav.flipper {
+    position: absolute;
+    top: 0;
+    height: 82px;
+}
+
+#nav-flipper-items {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#nav-flipper-items .nav-item {
+    display: inline-block;
+    color: rgb(96, 96, 96);
+    text-transform: uppercase;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+#nav-flipper-items .nav-item:hover{
+    color: rgb(32, 32, 32);
+}
+
+#nav-flipper-items .nav-item.selected {
+    color: rgb(64, 128, 255);
+    border-bottom: 2px solid rgb(64, 128, 255);
+
 }
 
 /* Contact card specifics */
@@ -203,11 +245,6 @@ ul.relevant-skills li span.skill-dot.z {
     cursor: pointer;
 }
 
-.filters li input[type=radio] {
-    position: absolute;
-    visibility: hidden;
-}
-
 .filters li label {
     position: relative;
     top: -1px;
@@ -215,7 +252,7 @@ ul.relevant-skills li span.skill-dot.z {
     cursor: pointer;
 }
 
-.filters li .check {
+.filters li .box {
     position: absolute;
     top: -1px;
     left: 0;
@@ -227,7 +264,7 @@ ul.relevant-skills li span.skill-dot.z {
     border: solid 3px rgb(128, 128, 128);
 }
 
-.filters li .checked {
+.filters li .mark {
     visibility: hidden;
     position: absolute;
     top: 5px;
@@ -241,28 +278,28 @@ ul.relevant-skills li span.skill-dot.z {
     background-color: rgb(128, 128, 128);
 }
 
-.filters li input[type=radio]:checked ~ .check {
+.filters li.checked .box {
     border-color: rgb(64, 128, 255);
 }
 
-.filters li input[type=radio]:checked ~ .checked {
+.filters li.checked .mark {
     visibility: visible;
     background-color: rgb(64, 128, 255);
 }
 
-.filters li:hover .check {
+.filters li:hover .box {
     border-color: rgb(96, 96, 96);
 }
 
-.filters li:hover .checked {
+.filters li:hover .mark {
     background-color: rgb(96, 96, 96);
 }
 
-.filters li:hover input[type=radio]:checked ~ .check {
+.filters li.checked:hover .box {
     border-color: rgb(56, 96, 212);
 }
 
-.filters li:hover input[type=radio]:checked ~ .checked {
+.filters li.checked:hover .mark {
     background-color: rgb(56, 96, 212);
 }
 
@@ -420,17 +457,42 @@ ul.skills-list li.skill-item.selected {
 
 div.main-content {
     min-width: 608px;
+    top: 96px;
+}
+
+nav.fixed {
+    top: 0;
+}
+
+nav div.main-content {
+    top: 0;
 }
 
 #profile-photo-wrapper {
     height: 680px;
 }
 
+nav.flipper {
+    visibility: hidden;
+}
+
+.card {
+
+}
+
+.card.visible {
+
+}
+
+.card.hidden {
+
+}
+
 /* Narrow screen designs go here */
 @media screen and (min-width: 900px) {
 
     div.main-content {
-        width: 608px;
+        width: 768px;
     }
 
     #contact-info, #resume-info {
@@ -441,6 +503,11 @@ div.main-content {
         height: 512px;
     }
 
+    nav.fixed {
+        text-align: center;
+        top: 0;
+    }
+
 }
 
 /* Normal screen designs go here */
@@ -449,12 +516,55 @@ div.main-content {
     div.main-content {
         min-width: 1216px;
         width: 1216px;
+        top: 24px;
+    }
+
+    nav.fixed {
+        top: -100px;
     }
 
     #contact-info, #resume-info {
         display: inline-block;
         vertical-align: top;
         width: 576px;
+    }
+
+    #profile {
+        position: absolute;
+        z-index: 2;
+    }
+
+    nav.flipper {
+        visibility: visible;
+        left: 580px;
+    }
+
+    #nav-flipper-items .nav-item {
+        padding: 12px 0;
+        margin: 16px 8px 12px;
+    }
+
+    .card {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        transition: transform 0.5s ease-in;
+        -webkit-transition: transform 0.5s ease-in;
+        -moz-transition: transform 0.5s ease-in;
+        -o-transition: transform 0.5s ease-in;
+        backface-visibility: hidden;
+    }
+
+    .card.visible {
+        top: 96px;
+        left: 580px;
+        transform: rotateY(0);
+    }
+
+    .card.hidden {
+        top: 96px;
+        left: 580px;
+        transform: rotateY(180deg);
     }
 }
 
@@ -470,9 +580,23 @@ div.main-content {
         display: inline-block;
         vertical-align: top;
         width: 768px;
+        padding-top: 96px;
     }
 
     #profile-photo-wrapper {
         height: 760px;
+    }
+
+    nav.flipper {
+        left: 772px;
+    }
+
+    #nav-flipper-items .nav-item {
+        padding: 12px 0;
+        margin: 16px 16px 12px;
+    }
+
+    .card.visible, .card.hidden {
+        left: 772px;
     }
 }

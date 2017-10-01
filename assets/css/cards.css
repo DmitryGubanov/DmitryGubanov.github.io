@@ -54,14 +54,30 @@ div.more-info-btn::before {
     margin-right: 8px;
 }
 
+/* BREAKPOINTS */
+
+
+
 @media screen and (min-width: 900px) {
+
+    .card {
+        width: 736px;
+    }
 
 }
 
 @media screen and (min-width: 1300px) {
 
+    .card {
+        width: 542px;
+    }
+
 }
 
 @media screen and (min-width: 1700px) {
+
+    .card {
+        width: 736px;
+    }
 
 }
