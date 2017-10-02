@@ -20,6 +20,7 @@ html {
 
 body {
     background-color: rgb(212, 212, 212);
+    padding-bottom: 128px;
 }
 
 div.main-content {
@@ -124,7 +125,7 @@ nav.fixed {
 
 nav.flipper {
     position: absolute;
-    top: 0;
+    top: 48px;
     height: 82px;
 }
 
@@ -156,12 +157,24 @@ nav.flipper {
 
 #profile {
     background-color: rgb(64, 128, 255);
+    overflow: visible;
+    margin-top: 156px;
 }
 
 #profile-photo-wrapper {
     position: relative;
     overflow: hidden;
-    background-color: rgb(255, 255, 255);
+    height: 256px;
+    width: 256px;
+    border-radius: 100%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+#profile-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
 }
 
 #profile-photo-title {
@@ -176,24 +189,22 @@ nav.flipper {
 }
 
 #contact-name {
-    margin: 0 36px 0;
+    margin: 0 auto 0;
     font-size: 175%;
     font-weight: 600;
 }
 
 #contact-email {
-    margin: 8px 36px 16px;
+    margin: 8px auto 16px;
 }
 
 #profile-photo {
-    min-height: 100%;
-    width: 100%;
+
 }
 
 #profile .card-content {
     position: relative;
     z-index: 2;
-    box-shadow: 0 -64px 100px rgb(0, 0, 0);
 }
 
 #contact-buttons {
@@ -335,6 +346,10 @@ ul.skills-list li.skill-item.selected {
     border-bottom: 1px solid rgb(224, 224, 224);
 }
 
+#projects-list li.project-item.final {
+    margin-bottom: 0;
+}
+
 #projects-list li.project-item .project-name {
     font-size: 110%;
     margin-bottom: 16px;
@@ -419,6 +434,16 @@ ul.skills-list li.skill-item.selected {
     margin: 16px 0 8px;
 }
 
+#courses-list {
+    margin-top: 24px;
+}
+
+#courses-list.collapsed {
+    height: 0;
+    margin-top: 0;
+    visibility: hidden;
+}
+
 #courses-list li.course-item {
     position: relative;
     border-top: 1px solid rgb(224, 224, 224);
@@ -441,12 +466,22 @@ ul.skills-list li.skill-item.selected {
     color: rgb(168, 168, 168);
 }
 
-#work .card-content ul.work-details li {
+#work-details {
+    margin-top: 24px;
+}
+
+#work-details.collapsed {
+    margin-top: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#work-details li {
     list-style-type: disc;
     margin: 8px 0 16px 16px;
 }
 
-#work .card-content ul.work-details li .skill-item {
+#work-details li .skill-item {
     display: inline-block;
     text-decoration: underline;
 }
@@ -469,23 +504,12 @@ nav div.main-content {
 }
 
 #profile-photo-wrapper {
-    height: 680px;
+    top: -128px;
+    margin: 0 auto -128px;
 }
 
 nav.flipper {
     visibility: hidden;
-}
-
-.card {
-
-}
-
-.card.visible {
-
-}
-
-.card.hidden {
-
 }
 
 /* Narrow screen designs go here */
@@ -496,12 +520,10 @@ nav.flipper {
     }
 
     #contact-info, #resume-info {
-        width: 576px;
+        width: 768px;
     }
 
-    #profile-photo-wrapper {
-        height: 512px;
-    }
+
 
     nav.fixed {
         text-align: center;
@@ -544,6 +566,11 @@ nav.flipper {
         margin: 16px 8px 12px;
     }
 
+    #about-me, #skills, #projects, #education, #work {
+        /*max-height: 480px;
+        overflow-y: scroll;*/
+    }
+
     .card {
         position: absolute;
         top: 0;
@@ -556,13 +583,13 @@ nav.flipper {
     }
 
     .card.visible {
-        top: 96px;
+        top: 140px;
         left: 580px;
         transform: rotateY(0);
     }
 
     .card.hidden {
-        top: 96px;
+        top: 140px;
         left: 580px;
         transform: rotateY(180deg);
     }
@@ -581,10 +608,6 @@ nav.flipper {
         vertical-align: top;
         width: 768px;
         padding-top: 96px;
-    }
-
-    #profile-photo-wrapper {
-        height: 760px;
     }
 
     nav.flipper {

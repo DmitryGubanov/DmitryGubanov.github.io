@@ -15,6 +15,7 @@ $(function () {
             $('#nav-flip-' + card).click(function () {
                 if($('#' + card).hasClass('hidden')) {
                     hideAllCards();
+                    highlightNavFlipperItem(card);
                     $('#' + card).attr('class', 'card visible');
 
                 }
@@ -39,6 +40,18 @@ $(function () {
                 updateSelectedSkills();
             });
         });
+
+        // click event for revealing relevant courses in education section
+        $('#expand-relevant-courses').click(function () {
+            $('#courses-list').attr('class', '');
+            $(this).hide(); // remove button
+        });
+
+        // click event for revealing more work details in work section
+        $('#expand-work-details').click(function () {
+            $('#work-details').attr('class', '');
+            $(this).hide(); // remove button
+        });
     });
 
     // scroll handling - wait for user to stop scrolling before firing
@@ -50,7 +63,7 @@ $(function () {
         }
         // trigger scroll event after timeout
         scrollTimeout = setTimeout(function () {
-            updateNavBarHighlight()
+            updateNavBarHighlight();
         }, 200);
     });
 
@@ -65,12 +78,18 @@ $(function () {
 
     function highlightNavItem(item) {
         cards.forEach(function (card) {
-            $('#nav-flip-' + card).attr('class', 'nav-item');
             $('#nav-' + card).attr('class', 'nav-item');
         });
-        $('#nav-flip-' + item).attr('class', 'nav-item selected');
         $('#nav-' + item).attr('class', 'nav-item selected');
     }
+
+    function highlightNavFlipperItem(item) {
+        cards.forEach(function (card) {
+            $('#nav-flip-' + card).attr('class', 'nav-item');
+        });
+        $('#nav-flip-' + item).attr('class', 'nav-item selected');
+    }
+
 
     function scrollToCard(card) {
         $('html, body').animate(

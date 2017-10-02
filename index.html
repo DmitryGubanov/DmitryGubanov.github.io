@@ -44,13 +44,14 @@
 
             <div id="profile" class="card">
                 <div id="profile-photo-wrapper">
-                    <div id="profile-photo-title">
-                        <div id="contact-name">Dmitry Gubanov</div>
-                        <div id="contact-email">gubanov.a.dmitry@gmail.com</div>
-                    </div>
+                    <!--div id="profile-photo-title">
+
+                    </div-->>
                     <img id="profile-photo" src="https://new1.fjcdn.com/comments/Pimpinpenguin+rolled+a+random+image+posted+in+comment+119714+at+_8b5288379fdf3abcbe26556bea3e4794.png" alt="photo" />
                 </div>
                 <div id="contact-buttons" class="card-content">
+                    <div id="contact-name">Dmitry Gubanov</div>
+                    <div id="contact-email">gubanov.a.dmitry@gmail.com</div>
                     <button id="my-resume-btn"><span class="fa fa-download"></span>Download My Resume</button>
                     <button id="my-github-btn"><span class="fa fa-external-link"></span>View My Github</button>
                 </div>
@@ -161,7 +162,7 @@
                             <ul class="relevant-skills">
                                 <li><span class="skill-dot e"></span>Python</li>
                             </ul>
-                            <div class="more-info-btn">More Info</div>
+                            <!--div class="more-info-btn">More Info</div-->
                         </li>
                         <li class="project-item">
                             <div class="project-name">
@@ -175,7 +176,7 @@
                                 <li><span class="skill-dot e"></span>Python</li>
                                 <li><span class="skill-dot z"></span>Dynamic Programming</li>
                             </ul>
-                            <div class="more-info-btn">More Info</div>
+                            <!--div class="more-info-btn">More Info</div-->
                         </li>
                         <li class="project-item">
                             <div class="project-name">
@@ -192,7 +193,7 @@
                                 <li><span class="skill-dot z"></span>Node.js</li>
                                 <li><span class="skill-dot z"></span>MongoDB</li>
                             </ul>
-                            <div class="more-info-btn">More Info</div>
+                            <!--div class="more-info-btn">More Info</div-->
                         </li>
                         <li class="project-item">
                             <div class="project-name">
@@ -208,7 +209,7 @@
                             <ul class="relevant-skills">
                                 <li><span class="skill-dot e"></span>Python</li>
                             </ul>
-                            <div class="more-info-btn">More Info</div>
+                            <!--div class="more-info-btn">More Info</div-->
                         </li>
                         <li class="project-item">
                             <div class="project-name">
@@ -223,9 +224,9 @@
                                 <li><span class="skill-dot d"></span>SQL</li>
                                 <li><span class="skill-dot z"></span>Android Development</li>
                             </ul>
-                            <div class="more-info-btn">More Info</div>
+                            <!--div class="more-info-btn">More Info</div-->
                         </li>
-                        <li class="project-item">
+                        <li class="project-item final">
                             <div class="project-name">
                                 <span class="fa fa-table"></span> Student Mark Organizer
                             </div>
@@ -237,7 +238,7 @@
                                 <li><span class="skill-dot a"></span>Java</li>
                                 <li><span class="skill-dot z"></span>Android Development</li>
                             </ul>
-                            <div class="more-info-btn">More Info</div>
+                            <!--div class="more-info-btn">More Info</div-->
                         </li>
                     </ul>
                 </div>
@@ -254,8 +255,8 @@
                     <div class="detail">Computer Engineering (2010 - 2012)</div>
                     <div class="detail">Computer Science and Math (2012 - 2017)</div>
                     <div class="detail">Final GPA: 3.2</div>
-                    <div class="more-info-btn">Relevant courses</div>
-                    <ul id="courses-list">
+                    <div id="expand-relevant-courses" class="more-info-btn">Relevant courses</div>
+                    <ul id="courses-list" class="collapsed">
                         <li class="course-item">
                             <div class="course-name">Software Design</div>
                             <div class="course-duration">4 months</div>
@@ -363,8 +364,8 @@
                         <li><span class="skill-dot z"></span>Agile</li>
                         <li><span class="skill-dot z"></span>Scrum</li>
                     </ul>
-                    <div class="more-info-btn">More detailed tasks</div>
-                    <ul class="work-details">
+                    <div id="expand-work-details" class="more-info-btn">More detailed tasks</div>
+                    <ul id="work-details" class="work-details collapsed">
                         <li>Worked with a team of 8 in an <span class="skill-item">Agile</span> environment with daily <span class="skill-item">scrum</span> meetings, while interacting with other teams on a regular basis</li>
                         <li>Debugged code and test cases written in <span class="skill-item">C</span>, <span class="skill-item">Perl</span>, and <span class="skill-item">Java</span> while interfacing with their developers on a daily basis</li>
                         <li>Developed features for the testing infrastructure using <span class="skill-item">PHP</span> and <span class="skill-item">Perl</span></li>
