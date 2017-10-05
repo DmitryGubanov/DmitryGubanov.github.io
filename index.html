@@ -18,7 +18,7 @@
 
     <nav class="fixed">
         <div class="main-content">
-            <span class="fa fa-bars"></span>
+            <span id="hamburger-btn" class="fa fa-bars"></span>
             <ul id="nav-items">
                 <li id="nav-about-me" class="nav-item selected">About Me</li>
                 <li id="nav-skills" class="nav-item">Skills</li>
@@ -29,8 +29,8 @@
         </div>
     </nav>
 
-    <nav class="side">
-        <div id="side-logo">D<span class="small-text">mitry</span>G<span class="small-text">ubanov</span></div>
+    <nav id="nav-side" class="side hidden">
+        <div id="side-logo">Dmitry Gubanov</div>
         <ul id="nav-side-items">
             <li id="nav-side-about-me" class="nav-item">About Me</li>
             <li id="nav-side-skills" class="nav-item">Skills</li>
@@ -38,6 +38,7 @@
             <li id="nav-side-education" class="nav-item">Education</li>
             <li id="nav-side-work" class="nav-item">Employment</li>
         </ul>
+        <div id="nav-side-outside" class="outside"></div>
     </nav>
 
     <div id="dimmer"></div>
@@ -66,8 +67,8 @@
                 <div id="contact-buttons" class="card-content">
                     <div id="contact-name">Dmitry Gubanov</div>
                     <div id="contact-email">gubanov.a.dmitry@gmail.com</div>
-                    <button id="my-resume-btn"><span class="fa fa-download"></span>Download My Resume</button>
-                    <button id="my-github-btn"><span class="fa fa-external-link"></span>View My Github</button>
+                    <a id="my-resume-btn" class="my-btn"><span class="fa fa-download"></span>Download My Resume</a>
+                    <a id="my-github-btn" class="my-btn" href="https://github.com/DmitryGubanov"><span class="fa fa-external-link"></span>View My Github</a>
                 </div>
             </div>
 
@@ -169,7 +170,7 @@
                             <div class="project-name">
                                 <span class="fa fa-line-chart"></span> Stock Trading Program
                             </div>
-                            <a class="my-btn github-link">
+                            <a class="my-btn github-link" href="https://github.com/DmitryGubanov/portfolio-backtester">
                                 <span class="fa fa-external-link"></span> View on GitHub
                             </a>
                             <p class="project-desc">Backtests user's portfolios using indicator-based strategies. Features optional periodic rebalancing and contributions. Summarizes results with charts and statistics.</p>
@@ -182,7 +183,7 @@
                             <div class="project-name">
                                 <span class="fa fa-money"></span> Budget Macros
                             </div>
-                            <a class="my-btn github-link">
+                            <a class="my-btn github-link" href="https://github.com/DmitryGubanov/budget-macros">
                                 <span class="fa fa-external-link"></span> View on GitHub
                             </a>
                             <p class="project-desc">Takes a set diet goals - calories, protein, fats, carbs - and a database of foods with nutritional and pricing info, then uses Dynamic Programming to find the cheapest diet satisfying the dietary requirements.</p>
@@ -196,7 +197,7 @@
                             <div class="project-name">
                                 <span class="fa fa-cutlery"></span> The Tasters
                             </div>
-                            <a class="my-btn github-link">
+                            <a class="my-btn github-link" href="https://github.com/DmitryGubanov/the-tasters">
                                 <span class="fa fa-external-link"></span> View on GitHub
                             </a>
                             <p class="project-desc">A group project for a Yelp-like website with a focus on rating meals at restaurants, rather than the restaurants themselves.</p>
@@ -229,7 +230,7 @@
                             <div class="project-name">
                                 <span class="fa fa-gamepad"></span> Cookie
                             </div>
-                            <a class="my-btn github-link">
+                            <a class="my-btn github-link" href="https://github.com/DmitryGubanov/cookie">
                                 <span class="fa fa-external-link"></span> View on GitHub
                             </a>
                             <p class="project-desc">A two-person Android game inspired by "relationship coupons", in which each player provides a set of prizes for the other player to be periodically drawn from.</p>
@@ -244,7 +245,7 @@
                             <div class="project-name">
                                 <span class="fa fa-table"></span> Student Mark Organizer
                             </div>
-                            <a class="my-btn github-link">
+                            <a class="my-btn github-link" href="https://github.com/DmitryGubanov/simple-school-agenda">
                                 <span class="fa fa-external-link"></span> View on GitHub
                             </a>
                             <p class="project-desc">A minimal app to track all your course and assignment marks - with automatic average calculations - to facilitate simpler record keeping and easier goal-setting as the school year progresses.</p>

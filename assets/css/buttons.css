@@ -8,11 +8,11 @@ button, .my-btn {
     color: rgb(255, 255, 255);
     border-radius: 2px;
     padding: 8px 24px;
-    box-shadow: 0px 3px 4px rgb(64, 64, 64);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
 }
 
 button:hover, .my-btn:hover {
-    box-shadow: 0px 2px 3px rgb(64, 64, 64);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
 }
 
 button span.fa, .my-btn span.fa {

@@ -27,6 +27,12 @@ $(function () {
                 scrollToCard(card);
                 highlightNavItem(card);
             });
+            $('#nav-side-' + card).click(function () {
+                // since this is dynamic, need to re-generate card str
+                var card = this.id.substring(9, this.id.length);
+                $('#nav-side').attr('class', 'side hidden');
+                scrollToCard(card);
+            });
         });
 
         // set click events for each radio button
@@ -52,6 +58,15 @@ $(function () {
             $('#work-details').attr('class', '');
             $(this).hide(); // remove button
         });
+
+        $('#hamburger-btn').click(function () {
+            $('#nav-side').attr('class', 'side');
+        });
+
+        $('#nav-side-outside').click(function () {
+            $('#nav-side').attr('class', 'side hidden');
+        });
+
     });
 
     // scroll handling - wait for user to stop scrolling before firing
