@@ -7,6 +7,8 @@ $(function () {
     // events that happen on loading the page
     $(document).ready(function () {
 
+        console.log('ayo'); // a little inside joke, ignore it
+
         updateNavBarHighlight();
 
         // set click events for each nav bar item
