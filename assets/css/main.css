@@ -303,7 +303,6 @@ nav.flipper {
 }
 
 #my-resume-btn {
-    margin-right: 16px;
     background-color: rgb(0, 128, 212);
 }
 
@@ -312,7 +311,6 @@ nav.flipper {
 }
 
 #my-github-btn {
-    margin-left: 16px;
     background-color: rgb(128, 72, 212);
 }
 
@@ -582,7 +580,6 @@ ul.skills-list li.skill-item.selected {
 /* Mobile or very small screen desgins go here */
 
 div.main-content {
-    min-width: 608px;
     top: 96px;
 }
 
@@ -605,6 +602,12 @@ nav div.main-content {
 
 nav.flipper {
     visibility: hidden;
+}
+
+#my-resume-btn, #my-github-btn {
+    display: block;
+    max-width: 400px;
+    margin: 16px auto;
 }
 
 /* Narrow screen designs go here */
@@ -637,6 +640,11 @@ nav.flipper {
 
     #dimmer {
         display: none;
+    }
+
+    #my-resume-btn, #my-github-btn {
+        display: inline-block;
+        margin: 16px 8px;;
     }
 
 }
