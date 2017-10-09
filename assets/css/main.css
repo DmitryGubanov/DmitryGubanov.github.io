@@ -339,7 +339,6 @@ nav.flipper {
 
 .filters li {
     position: relative;
-    display: inline-block;
     padding: 2px 36px 2px 0;
     margin-right: 8px;
     cursor: pointer;
@@ -430,7 +429,6 @@ ul.skills-list li.skill-item.selected {
 
 #projects-list li.project-item {
     position: relative;
-    padding-bottom: 24px;
     margin-bottom: 24px;
     border-bottom: 1px solid rgb(224, 224, 224);
 }
@@ -452,8 +450,6 @@ ul.skills-list li.skill-item.selected {
 
 #projects-list li.project-item a.github-link {
     position: absolute;
-    top: 0;
-    right: 0;
     font-size: 80%;
     padding: 4px 16px;
     background-color: rgb(212, 0, 128);
@@ -500,17 +496,15 @@ ul.skills-list li.skill-item.selected {
 
 #education .place, #work .place {
     color: rgb(124, 124, 124);
-    margin-bottom: 16px;
 }
 
 #education .place::before, #work .place::before {
     content: "at";
     margin: 0 4px 0 2px;
 }
+
 #education .years, #work .years {
     position: absolute;
-    top: 24px;
-    right: 24px;
     font-size: 110%;
     color: rgb(128, 128, 128);
 }
@@ -610,6 +604,26 @@ nav.flipper {
     margin: 16px auto;
 }
 
+.filters li {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#projects-list .project-item {
+    padding-bottom: 64px;
+}
+
+#projects-list .project-item .github-link {
+    left: 0;
+    bottom: 24px;
+}
+
+#education .years, #work .years {
+    position: relative;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
 /* Narrow screen designs go here */
 @media screen and (min-width: 900px) {
 
@@ -645,6 +659,34 @@ nav.flipper {
     #my-resume-btn, #my-github-btn {
         display: inline-block;
         margin: 16px 8px;;
+    }
+
+    .filters li {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+
+    #projects-list .project-item {
+        padding-bottom: 24px;
+    }
+
+    #projects-list .project-item .github-link {
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: auto;
+    }
+
+    #education .place, #work .place {
+        margin-bottom: 16px;
+    }
+
+    #education .years, #work .years {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
 }
