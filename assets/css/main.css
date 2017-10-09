@@ -264,8 +264,8 @@ nav.flipper {
 #profile-photo {
     position: absolute;
     top: 0;
-    left: 0;
-    max-width: 100%;
+    left: -20px;
+    max-width: 280px;
 }
 
 #profile-photo-title {
