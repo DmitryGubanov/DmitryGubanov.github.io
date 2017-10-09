@@ -140,11 +140,9 @@ $(function () {
             }
         });
         $('li.skill-item').each(function () {
-            console.log(this);
             var thisItem = this;
             var toSelect = selectedTypes.length > 0;
             selectedTypes.forEach(function (selectedType) {
-                console.log(thisItem.dataset.skilltype);
                 if (thisItem.dataset.skilltype.indexOf(selectedType) == -1) {
                     toSelect = false;
                 }
